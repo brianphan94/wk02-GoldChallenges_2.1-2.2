@@ -1,1 +1,20 @@
 /* STYLE HERE */
+body {
+    position: fixed;
+    margin: 0;
+    display: inline-flex;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%)
+}
+
+
+#imageOne {
+    border: 5px solid black;
+    border-radius: 10em;
+}
+
+#imageTwo {
+    border: 5px solid brown;
+    border-radius: 10em;
+}

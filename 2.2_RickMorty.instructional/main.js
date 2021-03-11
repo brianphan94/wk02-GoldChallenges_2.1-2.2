@@ -19,19 +19,15 @@
 
 //NOTE: Write your code below and push back to your github branch.  SUBMIT YOUR GITHUB URL IN CANVAS
 
-const fetch = require('node-fetch');
 
 function rickAndMorty() {
     fetch ('https://rickandmortyapi.com/api/character')
     .then (res => res.json())
-    .then (json => displayRickAndMorty(json))
+    .then (json => {
+        let imgOne = document.getElementById('imageOne')
+        let imgTwo = document.getElementById('imageTwo')
+        imgOne.src = json.results[0].image
+        imgTwo.src = json.results[1].image
+    })
 }
 rickAndMorty()
-
- function displayRickAndMorty(characters){
-     characters.forEach(c => {
-         let character = document.createElement('li');
-         character.innerText = c.name;
-        diffChar.appendChild(character);
-     })
-}
